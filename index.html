@@ -20,7 +20,7 @@
 <h1>ModelMedic – Publisher Privacy Policy</h1>
 <p class="meta"><strong>Publisher:</strong> ME Solutions (Mohamed Elzaiat)<br>
 <strong>Contact:</strong> <a href="mailto:mo.elzaiat@outlook.com">mo.elzaiat@outlook.com</a><br>
-<strong>Effective date:</strong> 8 September 2025</p>
+<strong>Effective date:</strong> 18 September 2025</p>
 
 <h2>1) Scope</h2>
 <p>This policy describes how we handle personal data in connection with the <strong>ModelMedic</strong> Revit add-in and our related support channels. Purchases through the Autodesk App Store are also subject to Autodesk’s terms; Autodesk may share purchaser details with us for entitlement and support.</p>
@@ -46,9 +46,9 @@
   <p><strong>Update checks are required.</strong> ModelMedic performs a weekly online update check. If a critical update is available, the app may require you to update before further use. This mechanism also allows us to enforce licensing in the future.</p>
 </div>
 <ul>
-  <li><strong>What is transmitted:</strong> the app version, the Revit major version, the edition (e.g., Revit 2025/2026), a timestamp, and a randomly generated <em>installation ID</em> (UUID) that does not contain your name or model data. Standard server access logs may include IP address and user-agent as part of normal web requests.</li>
+  <li><strong>What is transmitted:</strong> the app version (e.g., <code>1.3.0</code>), the Revit major version (e.g., <code>2025</code>), a randomly generated <em>installation ID</em> (<code>installId</code>), the Revit username (<code>revitUser</code>), and the Windows account name (<code>domain\user</code>, <code>windowsUser</code>). Our hosting provider also records IP address and User-Agent as part of normal web requests.</li>
   <li><strong>How it’s collected:</strong> The add-in sends a small request to our update/licensing endpoint weekly (or when you manually check for updates).</li>
-  <li><strong>How we use it:</strong> To determine whether an update is required, to validate entitlements once licensing is introduced, and to prevent abuse. We do not use this data for analytics or advertising.</li>
+  <li><strong>How we use it:</strong> To determine whether an update is required, validate entitlements (once licensing is introduced), troubleshoot abuse, and ensure compatibility. We do not use this data for analytics or advertising.</li>
 </ul>
 
 <h3>D. Support communications (if you contact us)</h3>
@@ -58,15 +58,16 @@
   <li><strong>How we use it:</strong> To resolve your request and improve reliability.</li>
 </ul>
 
+<p class="small"><strong>Legal bases (GDPR/UK GDPR):</strong> performance of contract (to provide and secure the app) and legitimate interests (fraud/abuse prevention and service reliability). We do not use your data for advertising.</p>
+
 <h2>3) Sharing with third parties &amp; protection commitments</h2>
 <p>We do not sell personal data. We share only when necessary and require any third party to protect data to at least the standards in this policy (confidentiality, security, limited-purpose processing, and deletion on request/termination).</p>
 <ul>
   <li><strong>Autodesk (App Store):</strong> provides us purchaser name/email for entitlement and support.</li>
+  <li><strong>Cloudflare, Inc. (Workers / Workers KV):</strong> we operate a Cloudflare Worker that receives the update/licensing pings and stores a small record in Workers KV (fields listed in Section 2C). Cloudflare processes IP address and User-Agent as part of providing its edge services.</li>
   <li><strong>Email provider:</strong> email you send to us is processed by our email service to deliver and store your messages.</li>
+  <li><strong>GitHub Pages (GitHub, Inc.):</strong> hosts our static website/policy and may log visitor IP addresses and User-Agent in standard access logs.</li>
 </ul>
-<p>We will keep an up-to-date list of processors upon request.</p>
-
-<p><strong>Hosting (GitHub Pages).</strong> This policy page is hosted on GitHub Pages. GitHub may collect standard server logs (including visitor IP addresses) for security and abuse prevention. See GitHub’s <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Privacy Statement</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" target="_blank" rel="noopener">About GitHub Pages</a>.</p>
 
 <h2>4) Data retention and deletion</h2>
 <ul>
@@ -89,7 +90,7 @@
 <p>We apply reasonable technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction.</p>
 
 <h2>8) International transfers</h2>
-<p>If data is transferred across borders, we use appropriate safeguards required by law to protect your information.</p>
+<p>Because our Worker runs on a global edge network, data may be processed in data centers outside your country. We use appropriate safeguards required by law to protect your information.</p>
 
 <h2>9) Children</h2>
 <p>ModelMedic is professional software intended for use with Autodesk Revit and is <strong>not directed to children</strong> and not intended for individuals under 16.</p>
@@ -104,5 +105,3 @@
 
 </body>
 </html>
-
-
